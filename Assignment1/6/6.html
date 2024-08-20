@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timetable</title>
+    <style>
+        body {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 70%;
+            font-size: 14px;
+            text-align: center;
+        }
+
+        th,td{
+            padding: 5px;
+        }
+
+        .lunch-break {
+            writing-mode: vertical-rl;
+            transform: rotate(180deg);
+            padding: 30px 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <table border="1">
+        <tr>
+            <th>Time</th>
+            <th>9.00 - 9.55</th>
+            <th>9.55 - 10.50</th>
+            <th>11.10 - 12.05</th>
+            <th>12.05 - 1.00</th>
+            <th rowspan="6" class="lunch-break">Lunch Break</th>
+            <th>1.55 - 2.50</th>
+            <th>2.50 - 3.40</th>
+            <th>3.40 - 4.30</th>
+        </tr>
+        <tr>
+            <th>MON</th>
+            <td colspan="3">LAB</td>
+            <td>MC&AD</td>
+            <td>NLP/CC&BDA</td>
+            <td>AWT</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>TUE</th>
+            <td>AIML</td>
+            <td>AWT</td>
+            <td>Placement Training</td>
+            <td>NLP/CC&BDA</td>
+            <td colspan="2">Placement Training</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>WED</th>
+            <td>AIML</td>
+            <td>AWT</td>
+            <td>MC&AD</td>
+            <td>NW & CS/BCT</td>
+            <td colspan="3">LAB</td>
+        </tr>
+        <tr>
+            <th>THU</th>
+            <td>NLP/CC&BDA</td>
+            <td>AIML</td>
+            <td>NW & CS/BCT</td>
+            <td>MC&AD</td>
+            <td colspan="2">Placement Training</td>
+            <td></td>
+        </tr>
+        <tr>
+            <th>FRI</th>
+            <td>NW & CS/BCT</td>
+            <td>AIML</td>
+            <td>AWT</td>
+            <td></td>
+            <td colspan="3">MINI Project LAB/Journal Club</td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

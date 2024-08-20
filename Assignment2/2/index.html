@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectors Example</title>
+    <style>
+        /* Element Selector */
+        h1 {
+            color: blue;
+        }
+
+        /* ID Selector */
+        #intro {
+            font-size: 18px;
+        }
+
+        /* Class Selector */
+        .highlight {
+            background-color: yellow;
+        }
+
+        /* Descendant Selector */
+        p strong {
+            color: red;
+        }
+
+        /* Group Selector */
+        h2,
+        h3 {
+            color: green;
+        }
+
+        /* Universal Selector */
+        * {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Child Selector */
+        ul>li {
+            list-style-type: square;
+        }
+
+        /* Adjacent Sibling Selector */
+        h2+p {
+            color: purple;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Selectors in CSS</h1>
+    <p id="intro">This paragraph uses the <strong>descendant</strong> selector.</p>
+    <p class="highlight">This paragraph is highlighted using a class selector.</p>
+    <h2>Subheading 1</h2>
+    <p>This paragraph is styled using the adjacent sibling selector.</p>
+    <h3>Subheading 2</h3>
+    <ul>
+        <li>First item</li>
+        <li>Second item</li>
+    </ul>
+</body>
+
+</html>

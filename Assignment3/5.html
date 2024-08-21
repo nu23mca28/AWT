@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equality Operators</title>
+</head>
+
+<body>
+    <h1>Strict vs. Loose Equality</h1>
+    <label for="value1">Value 1:</label>
+    <input type="text" id="value1">
+    <label for="value2">Value 2:</label>
+    <input type="text" id="value2">
+    <button onclick="compare()">Compare</button>
+    <div id="result"></div>
+
+    <script>
+        function compare() {
+            const val1 = document.getElementById('value1').value;
+            const val2 = document.getElementById('value2').value;
+
+            const strictEqual = (val1 === val2);
+            const looseEqual = (val1 == val2);
+
+            document.getElementById('result').innerHTML = `
+                <p>Strict Equality (===): ${strictEqual}</p>
+                <p>Loose Equality (==): ${looseEqual}</p>
+            `;
+        }
+    </script>
+</body>
+
+</html>

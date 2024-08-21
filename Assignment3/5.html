@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equality Operators</title>
+</head>
+
+<body>
+    <h1>Strict vs. Loose Equality</h1>
+    <div id="result"></div>
+
+    <script>
+        const val1 = '5';
+        const val2 = 5;
+
+        const strictEqual = (val1 === val2);
+        const looseEqual = (val1 == val2);
+
+        document.getElementById('result').innerHTML = `
+                <p>Value 1: '${val1}'</p>
+                <p>Value 2: ${val2}</p>
+                <p>Strict Equality (===): ${strictEqual}</p>
+                <p>Loose Equality (==): ${looseEqual}</p>
+            `;
+    </script>
+</body>
+
+</html>

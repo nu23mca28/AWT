@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+
+<body>
+    <script>
+
+        document.write("<h2>Implicit Type Conversion</h2>");
+
+        let number = 5;
+        let text = "The number is: ";
+        let result = text + number;
+        document.write(result + "<br>");
+
+
+        document.write("<h2>Explicit Type Conversion</h2>");
+
+        let stringNumber = "123";
+        let convertedNumber = Number(stringNumber);
+
+        document.write(convertedNumber + "<br>");
+        document.write(typeof convertedNumber + "<br>");
+
+        let numberValue = 456;
+        let convertedString = String(numberValue);
+
+        document.write(convertedString + "<br>");
+        document.write(typeof convertedString + "<br>");
+
+    </script>
+</body>
+
+</html>

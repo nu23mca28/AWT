@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sum of First n Natural Numbers</title>
+</head>
+
+<body>
+    <h1>Sum of First n Natural Numbers</h1>
+    <label for="number">Enter a number (n):</label>
+    <input type="number" id="number" min="1">
+    <button onclick="calculateSums()">Calculate</button>
+    <p id="whileSum"></p>
+    <p id="forSum"></p>
+
+    <script>
+        function calculateSums() {
+            const n = parseInt(document.getElementById('number').value);
+
+            let sumWhile = 0;
+            let iWhile = 1;
+            while (iWhile <= n) {
+                sumWhile += iWhile;
+                iWhile++;
+            }
+            document.getElementById('whileSum').innerText = `Sum using while loop: ${sumWhile}`;
+
+            let sumFor = 0;
+            for (let iFor = 1; iFor <= n; iFor++) {
+                sumFor += iFor;
+            }
+            document.getElementById('forSum').innerText = `Sum using for loop: ${sumFor}`;
+        }
+    </script>
+</body>
+
+</html>

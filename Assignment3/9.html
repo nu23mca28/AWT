@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Methods</title>
+</head>
+<body>
+    <h1>JavaScript Array Methods</h1>
+
+    <script>
+
+        let fruits = ['Apple', 'Banana', 'Cherry'];
+
+     
+        document.write("<p>Original array: " + fruits + "</p>");
+
+        fruits.push('Date');
+        document.write("<p>After push: " + fruits + "</p>");
+
+        
+        fruits.pop();
+        document.write("<p>After pop: " + fruits + "</p>");
+
+     
+        fruits.unshift('Apricot');
+        document.write("<p>After unshift: " + fruits + "</p>");
+
+        fruits.shift();
+        document.write("<p>After shift: " + fruits + "</p>");
+
+     
+        let upperCaseFruits = fruits.map(fruit => fruit.toUpperCase());
+        document.write("<p>Uppercase fruits: " + upperCaseFruits + "</p>");
+
+       
+        let longFruits = fruits.filter(fruit => fruit.length > 5);
+        document.write("<p>Fruits with more than 5 letters: " + longFruits + "</p>");
+    </script>
+</body>
+</html>

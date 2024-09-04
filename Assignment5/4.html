@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        let text = prompt("Enter a line of text:");
+        function sortWordsAlphabetically(text) {
+            let words = text.split(/\s+/);
+            words.sort();
+            return words.join(' ');
+        }
+        let sortedWords = sortWordsAlphabetically(text);
+        document.getElementById("result").innerHTML = "Sorted words: " + sortedWords;
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        let order = prompt("Enter the sorting order (ascending or descending):").toLowerCase();
+        let numbers = [5, 3, 8, 1, 2, 7, 4, 6];
+        function sortArray(numbers, order) {
+            switch (order) {
+                case 'ascending':
+                    return numbers.sort((a, b) => a - b);
+                case 'descending':
+                    return numbers.sort((a, b) => b - a);
+                default:
+                    alert("Invalid order. Please enter 'ascending' or 'descending'.");
+                    return numbers;
+            }
+        }
+        let sortedNumbers = sortArray(numbers, order);
+        document.getElementById("result").innerHTML = "Sorted array: " + sortedNumbers.join(', ');
+
+    </script>
+</body>
+
+</html>

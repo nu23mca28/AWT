@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        function countNamesEndingInIEOrY(names) {
+            let count = 0;
+            for (let name of names) {
+                if (name.endsWith('ie') || name.endsWith('y')) {
+                    count++;
+                }
+            }
+            return count;
+        }
+        const namesArray = ['Charlie', 'Maggie', 'Daisy', 'Maxie', 'Jake', 'Clyde'];
+        document.getElementById("result").innerHTML = "Result = " + countNamesEndingInIEOrY(namesArray);
+    </script>
+</body>
+
+</html>

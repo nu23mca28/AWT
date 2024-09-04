@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <p id="result"></p>
+    <script>
+        function reverseNumber(num) {
+            let numStr = num.toString();
+            let reversedStr = numStr.split('').reverse().join('');
+            return parseInt(reversedStr, 10);
+        }
+        let num = prompt("Enter the number : ");
+        document.getElementById("result").innerHTML = "Result is " + reverseNumber(num);
+
+    </script>
+</body>
+
+</html>

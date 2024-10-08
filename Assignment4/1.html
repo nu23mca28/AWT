@@ -5,12 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basic HTML5 Structure</title>
+    <style>
+        /* General styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        nav {
+            background-color: #444;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        nav ul li a:hover {
+            color: #f1c40f;
+        }
+
+        main {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        main section {
+            margin: 50px 0;
+        }
+
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+
+        /* Section height to simulate a single-page effect */
+        #Home,
+        #About,
+        #Services,
+        #Contact {
+            min-height: 100vh;
+        }
+    </style>
 </head>
 
 <body>
     <header>
         <h1>My Website</h1>
     </header>
+
     <nav>
         <ul>
             <li><a href="#Home">Home</a></li>
@@ -19,10 +90,29 @@
             <li><a href="#Contact">Contact</a></li>
         </ul>
     </nav>
+
     <main>
-        <h2>Welcome to My Website</h2>
-        <p>This is the main content area.</p>
+        <section id="Home">
+            <h2>Welcome to My Website</h2>
+            <p>This is the home section.</p>
+        </section>
+
+        <section id="About">
+            <h2>About Us</h2>
+            <p>Learn more about what we do.</p>
+        </section>
+
+        <section id="Services">
+            <h2>Our Services</h2>
+            <p>We offer a variety of services to cater to your needs.</p>
+        </section>
+
+        <section id="Contact">
+            <h2>Contact Us</h2>
+            <p>Feel free to reach out to us through this page.</p>
+        </section>
     </main>
+
     <footer>
         <p>&copy; 2024 Made by Darshan</p>
     </footer>

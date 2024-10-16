@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Move Text Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+
+        #movingText {
+            position: relative;
+            /* Allow movement */
+            font-size: 24px;
+            transition: left 0.2s, top 0.2s;
+            /* Smooth movement */
+        }
+
+        .button-container {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="movingText">Welcome to NMAMIT Nitte</h1>
+
+    <div class="button-container">
+        <button onclick="moveLeft()">Move Left</button>
+        <button onclick="moveDown()">Move Down</button>
+        <button onclick="moveRight()">Move Right</button>
+        <button onclick="moveUp()">Move Up</button>
+    </div>
+
+    <script>
+        const movingText = document.getElementById('movingText');
+        let posX = 0; // Initial horizontal position
+        let posY = 0; // Initial vertical position
+
+        function moveLeft() {
+            posX -= 10; // Move left by 10 pixels
+            updatePosition();
+        }
+
+        function moveRight() {
+            posX += 10; // Move right by 10 pixels
+            updatePosition();
+        }
+
+        function moveUp() {
+            posY -= 10; // Move up by 10 pixels
+            updatePosition();
+        }
+
+        function moveDown() {
+            posY += 10; // Move down by 10 pixels
+            updatePosition();
+        }
+
+        function updatePosition() {
+            movingText.style.left = posX + 'px';
+            movingText.style.top = posY + 'px';
+        }
+    </script>
+
+</body>
+
+</html>

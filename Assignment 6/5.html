@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Color Selector</title>
+</head>
+<body>
+
+    <h3>Select Your Favorite Color:</h3>
+    <label><input type="radio" name="color" value="Red"> Red</label><br>
+    <label><input type="radio" name="color" value="Blue"> Blue</label><br>
+    <label><input type="radio" name="color" value="Green"> Green</label><br>
+    <label><input type="radio" name="color" value="Yellow"> Yellow</label><br>
+    <label><input type="radio" name="color" value="Orange"> Orange</label><br>
+
+    <div id="output"></div>
+
+    <script>
+        // Function to display the chosen color
+        function showColor(event) {
+            document.getElementById('output').innerText = `Your favorite color is: ${event.target.value}`;
+        }
+
+        // Get all radio buttons
+        const radioButtons = document.querySelectorAll('input[name="color"]');
+
+        // Attach event listeners to each radio button
+        radioButtons.forEach(button => {
+            button.addEventListener('change', showColor);
+        });
+    </script>
+
+</body>
+</html>

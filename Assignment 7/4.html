@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Paragraph Stacking Example</title>
+    <style>
+        .paragraph {
+            position: absolute;
+            /* Allow stacking on top of each other */
+            width: 200px;
+            padding: 10px;
+            background-color: lightblue;
+            border: 1px solid #333;
+            cursor: pointer;
+            transition: z-index 0.2s;
+            /* Smooth transition for stacking */
+        }
+
+        .p1 {
+            top: 50px;
+            left: 50px;
+        }
+
+        .p2 {
+            top: 80px;
+            left: 70px;
+        }
+
+        .p3 {
+            top: 110px;
+            left: 90px;
+        }
+
+        .p4 {
+            top: 140px;
+            left: 110px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Click a Paragraph to Bring It to the Top</h3>
+
+    <div class="paragraph p1" onclick="bringToFront(this)">Paragraph 1</div>
+    <div class="paragraph p2" onclick="bringToFront(this)">Paragraph 2</div>
+    <div class="paragraph p3" onclick="bringToFront(this)">Paragraph 3</div>
+    <div class="paragraph p4" onclick="bringToFront(this)">Paragraph 4</div>
+
+    <script>
+        function bringToFront(element) {
+            // Get all paragraphs
+            const paragraphs = document.querySelectorAll('.paragraph');
+            // Set all to default z-index
+            paragraphs.forEach(p => p.style.zIndex = 1);
+            // Bring the clicked paragraph to the top
+            element.style.zIndex = 2;
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Grocery Checkbox Counter</title>
+</head>
+
+<body>
+
+    <h3>Select Grocery Items:</h3>
+    <label><input type="checkbox" class="grocery"> Apples</label><br>
+    <label><input type="checkbox" class="grocery"> Bananas</label><br>
+    <label><input type="checkbox" class="grocery"> Oranges</label><br>
+    <label><input type="checkbox" class="grocery"> Milk</label><br>
+    <label><input type="checkbox" class="grocery"> Bread</label><br>
+
+    <button id="countButton">Count Checked Items</button>
+
+    <div id="output"></div>
+
+    <script>
+        document.getElementById('countButton').onclick = function () {
+            const checkedCount = [...document.querySelectorAll('.grocery:checked')].length;
+            document.getElementById('output').innerText = `Checked Items: ${checkedCount}`;
+        };
+    </script>
+
+</body>
+
+</html>

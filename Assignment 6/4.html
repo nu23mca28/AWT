@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Favorite Color Selector</title>
+</head>
+<body>
+
+    <h3>Select Your Favorite Color:</h3>
+    <label><input type="radio" name="color" onclick="showColor('Red')"> Red</label><br>
+    <label><input type="radio" name="color" onclick="showColor('Blue')"> Blue</label><br>
+    <label><input type="radio" name="color" onclick="showColor('Green')"> Green</label><br>
+    <label><input type="radio" name="color" onclick="showColor('Yellow')"> Yellow</label><br>
+    <label><input type="radio" name="color" onclick="showColor('Orange')"> Orange</label><br>
+
+    <div id="output"></div>
+
+    <script>
+        function showColor(color) {
+            document.getElementById('output').innerText = `Your favorite color is: ${color}`;
+        }
+    </script>
+
+</body>
+</html>

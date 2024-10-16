@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Position Property Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            height: 1500px; /* Ensure enough height to enable scrolling */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .container {
+            width: 300px;
+            margin: 20px auto;
+            border: 2px solid black;
+            padding: 10px;
+            position: relative; /* Relative for absolute positioning of inner elements */
+        }
+        .static {
+            position: static; /* Default positioning */
+            background-color: lightgray;
+            padding: 10px;
+        }
+        .relative {
+            position: relative; /* Positioned relative to its original position */
+            top: 10px;
+            left: 10px;
+            background-color: lightcoral;
+            padding: 10px;
+        }
+        .absolute {
+            position: absolute; /* Positioned relative to the nearest positioned ancestor */
+            top: 30px;
+            left: 30px;
+            background-color: lightblue;
+            padding: 10px;
+        }
+        .fixed {
+            position: fixed; /* Positioned relative to the viewport */
+            top: 0;
+            right: 0;
+            background-color: lightgreen;
+            padding: 10px;
+        }
+        .sticky {
+            position: sticky; /* Sticky positioning */
+            top: 0; /* Sticks when it reaches the top of its container */
+            background-color: lightyellow;
+            padding: 10px;
+            margin-top: 50px; /* Space before the sticky element */
+        }
+    </style>
+</head>
+<body>
+
+    <h3>Position Property Example</h3>
+
+    <div class="container">
+        <div class="static">Static Position (default)</div>
+        <div class="relative">Relative Position</div>
+        <div class="absolute">Absolute Position</div>
+        <div class="sticky">Sticky Position</div>
+        <p>This is some content below the sticky element.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, </p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>Lorem ipsum dolor sit amet consectetur.</p>
+        <p>End of the content!</p>
+    </div>
+
+    <div class="fixed">Fixed Position (remains at top right)</div>
+    
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Computation Page</title>
+</head>
+
+<body>
+
+    <h3>Simple Calculator</h3>
+    <label>Number 1: <input type="text" id="num1"></label><br>
+    <label>Number 2: <input type="text" id="num2"></label><br>
+    <label>Operation (+, -, *, /, %): <input type="text" id="operation"></label><br>
+    <button id="computeButton">Compute</button><br>
+    <label>Result: <input type="text" id="result" readonly></label>
+
+    <script>
+        // Alert on page load
+        window.onload = function () {
+            alert('Welcome to the Computation page');
+        };
+
+        document.getElementById('computeButton').onclick = function () {
+            // Get input values
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            const operation = document.getElementById('operation').value;
+
+            // Validate inputs
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Please enter valid numbers for both inputs.');
+                return;
+            }
+            if (!['+', '-', '*', '/', '%'].includes(operation)) {
+                alert('Please enter a valid operation (+, -, *, /, %).');
+                return;
+            }
+
+            // Convert inputs to numbers
+            const number1 = parseFloat(num1);
+            const number2 = parseFloat(num2);
+            let result;
+
+            // Perform computation
+            switch (operation) {
+                case '+':
+                    result = number1 + number2;
+                    break;
+                case '-':
+                    result = number1 - number2;
+                    break;
+                case '*':
+                    result = number1 * number2;
+                    break;
+                case '/':
+                    result = number2 !== 0 ? number1 / number2 : 'Error: Division by zero';
+                    break;
+                case '%':
+                    result = number2 !== 0 ? number1 % number2 : 'Error: Division by zero';
+                    break;
+            }
+
+            // Display result
+            document.getElementById('result').value = result;
+        };
+    </script>
+
+</body>
+
+</html>

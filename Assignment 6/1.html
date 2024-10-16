@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple JavaScript Design Patterns</title>
+</head>
+
+<body>
+    <h1>JavaScript Design Patterns</h1>
+    <div id="output"></div>
+
+    <script>
+        // 1. Module Pattern
+        const Module = (function () {
+            return {
+                greet: function () {
+                    return 'Hello from Module Pattern!';
+                }
+            };
+        })();
+
+        // 2. Constructor Pattern
+        function Person(name) {
+            this.name = name;
+        }
+        Person.prototype.sayHello = function () {
+            return `Hello, my name is ${this.name}`;
+        };
+
+        // 3. Singleton Pattern
+        const Singleton = (function () {
+            let instance;
+            return {
+                getInstance: function () {
+                    if (!instance) {
+                        instance = { message: 'I am a Singleton' };
+                    }
+                    return instance;
+                }
+            };
+        })();
+
+        // 4. Observer Pattern
+        class Observer {
+            update(data) {
+                console.log('Observed:', data);
+            }
+        }
+
+        // Test the patterns
+        document.getElementById('output').innerHTML += Module.greet() + '<br>';
+
+        const john = new Person('Darshan');
+        document.getElementById('output').innerHTML += john.sayHello() + '<br>';
+
+        const instance1 = Singleton.getInstance();
+        const instance2 = Singleton.getInstance();
+        document.getElementById('output').innerHTML += `Singleton check: ${instance1 === instance2} <br>`;
+
+        const observer = new Observer();
+        observer.update('New notification!');
+    </script>
+</body>
+
+</html>

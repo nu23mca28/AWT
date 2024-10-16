@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Image Follows Mouse Click</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            height: 100vh;
+            /* Full height to allow clicks anywhere */
+            position: relative;
+            /* Position for child elements */
+        }
+
+        #cursorImage {
+            display: none;
+            /* Hide the image initially */
+            position: absolute;
+            /* Position it based on the click */
+            width: 50px;
+            /* Set image size */
+            height: 50px;
+            /* Set image size */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Click Anywhere to Show Image</h1>
+    <p>Click anywhere on this page to place your image at the mouse cursor's position.</p>
+
+    <img id="cursorImage" src="https://via.placeholder.com/50" alt="Your Image">
+
+    <script>
+        const cursorImage = document.getElementById('cursorImage');
+
+        // Show image at mouse position on click
+        document.onclick = function (event) {
+            cursorImage.style.display = 'block'; // Show the image
+            cursorImage.style.left = event.pageX + 'px'; // Set X position
+            cursorImage.style.top = event.pageY + 'px'; // Set Y position
+        };
+    </script>
+
+</body>
+
+</html>

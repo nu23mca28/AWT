@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Welcome to NMAMIT, Nitte</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            transition: color 0.3s, font-size 0.3s;
+            /* Smooth transition */
+        }
+
+        .hovered {
+            color: blue;
+            font-size: 36px;
+            /* Change font size on hover */
+            font-weight: bold;
+        }
+
+        #coordinates {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="welcomeHeading">Welcome to NMAMIT, Nitte</h1>
+
+    <p id="coordinateParagraph" onmousemove="showCoordinates(event)">
+        Move your mouse over this paragraph to see the X and Y coordinates.
+    </p>
+
+    <div id="coordinates">
+        <label>X Coordinate: <input type="text" id="xCoord" readonly></label><br>
+        <label>Y Coordinate: <input type="text" id="yCoord" readonly></label>
+    </div>
+
+    <script>
+        const heading = document.getElementById('welcomeHeading');
+
+        // Change style on mouse over
+        heading.onmouseover = function () {
+            heading.classList.add('hovered');
+        };
+
+        // Reset style on mouse out
+        heading.onmouseout = function () {
+            heading.classList.remove('hovered');
+        };
+
+        // Show coordinates on mouse move
+        function showCoordinates(event) {
+            document.getElementById('xCoord').value = event.clientX;
+            document.getElementById('yCoord').value = event.clientY;
+        }
+    </script>
+
+</body>
+
+</html>

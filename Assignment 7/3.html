@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form with Help Box</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .help-box {
+            border: 1px solid #ccc;
+            background-color: #f9f9f9;
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .form-field {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Registration Form</h3>
+
+    <div class="help-box">
+        <strong>Help Box:</strong><br>
+        Please fill out all fields in the form below.<br>
+        - First name, middle name, and last name should start with a capital letter.<br>
+        - Age must be between 18 and 60.<br>
+        - Enter a valid Indian mobile number.<br>
+        - Aadhar number should be 12 digits long.<br>
+        - Password must be at least 8 characters and include letters, digits, and a special character.
+    </div>
+
+    <form id="registrationForm">
+        <div class="form-field">
+            <label>First Name: <input type="text" id="firstName"></label>
+        </div>
+        <div class="form-field">
+            <label>Middle Name: <input type="text" id="middleName"></label>
+        </div>
+        <div class="form-field">
+            <label>Last Name: <input type="text" id="lastName"></label>
+        </div>
+        <div class="form-field">
+            <label>Age: <input type="number" id="age" min="1"></label>
+        </div>
+        <div class="form-field">
+            <label>Mobile Number: <input type="text" id="mobile"></label>
+        </div>
+        <div class="form-field">
+            <label>Aadhar Number: <input type="text" id="aadhar"></label>
+        </div>
+        <div class="form-field">
+            <label>Password: <input type="password" id="password"></label>
+        </div>
+        <div class="form-field">
+            <label>Confirm Password: <input type="password" id="confirmPassword"></label>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+</body>
+
+</html>

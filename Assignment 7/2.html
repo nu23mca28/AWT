@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Move Paragraph Example</title>
+    <style>
+        #movingParagraph {
+            position: absolute;
+            /* Allow positioning with x and y */
+            transition: left 0.5s, top 0.5s;
+            /* Smooth movement */
+        }
+    </style>
+</head>
+
+<body>
+
+    <h3>Move the Paragraph</h3>
+    <p id="movingParagraph">This is the paragraph that will be moved.</p>
+
+    <label>X Coordinate: <input type="number" id="xCoord" placeholder="Enter X"></label><br>
+    <label>Y Coordinate: <input type="number" id="yCoord" placeholder="Enter Y"></label><br>
+    <button id="moveButton">Move Paragraph</button>
+
+    <script>
+        document.getElementById('moveButton').onclick = function () {
+            const x = document.getElementById('xCoord').value;
+            const y = document.getElementById('yCoord').value;
+
+            // Move paragraph to the specified coordinates
+            const paragraph = document.getElementById('movingParagraph');
+            paragraph.style.left = x + 'px';
+            paragraph.style.top = y + 'px';
+        };
+    </script>
+
+</body>
+
+</html>
